@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+    portainer:
+        container_name: portainerDev
+
+        environment:
+            FORCE_COLOR: 1
+
+        ports:
+            - 9000:9000

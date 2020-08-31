@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+    portainer:
+        container_name: portainerProd
+
+        environment:
+            VIRTUAL_HOST: portainer.luisbeu.de
+            VIRTUAL_PORT: 9000
+            LETSENCRYPT_HOST: portainer.luisbeu.de
+
+            networks:
+                - default
+                - nginxproxynet
+
+        ports:
+            - 9000
+
+networks:
+    nginxproxynet:
+        external: true

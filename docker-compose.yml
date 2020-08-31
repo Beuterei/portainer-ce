@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+    portainer:
+        image: portainer/portainer-ce:2.0.0-alpine
+
+        networks:
+            - default
+
+        restart: always
+
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - portainerData:/data
+
+volumes:
+    portainerData: {}
