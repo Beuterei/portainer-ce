@@ -28,7 +28,7 @@
 Small docker setup for portainer-ce. The production environment also uses [jwilder/nginx-proxy](https://github.com/nginx-proxy/nginx-proxy) and [nginx-proxy/docker-letsencrypt-nginx-proxy-companion](https://github.com/nginx-proxy/docker-letsencrypt-nginx-proxy-companion).
 
 <!-- GETTING STARTED -->
-## Getting Started Local
+## Getting Started Develop
 
 To get a local copy up and running follow these simple steps.
 
