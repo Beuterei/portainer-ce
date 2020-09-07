@@ -48,10 +48,59 @@ git clone https://github.com/beuluis/portainer-ce.git
 docker-compose up --build
 ```
 3. Navigate to `localhost:9000`
+4. Follow setup instructions
 
-### Production
+### Customization
 
-The production environment is still being worked on. Under `docker-compose.production.yml` you can find an example for my setup. Feel free to fork it and change the setup for yourself
+1. Create a `.env` file
+```sh
+touch .env
+```
+2. Overwrite variables as you like (format: `{variable name}={variable value}`)
+
+| Variable | Description | Default value | Required |
+| --- | --- | --- | --- |
+| `PORT` | Which port is mapped to your host machine | `9000` | false |
+
+## Getting Started Production
+
+To get a copy up and running follow these simple steps.
+
+### Prerequisites
+
+* [Docker](https://docs.docker.com/get-docker/)
+* [Docker Compose](https://docs.docker.com/compose/install/)
+* [Nginx by me](https://github.com/beuluis/nginx)
+
+### Installation
+
+1. Clone the repo
+```sh
+git clone https://github.com/beuluis/atlassian-bitbucket.git --branch master
+```
+2. Create a `.env.prod` file
+```sh
+touch .env.prod
+```
+3. Overwrite all variables marked under Customization as required
+4. Start docker-compose
+```sh
+docker-compose --env-file ./.env.prod -f docker-compose.yml -f docker-compose.production.yml up -d
+```
+5. Navigate to `https://{your-host}`
+6. Follow setup instructions
+
+### Customization
+
+1. Create a `.env.prod` file
+```sh
+touch .env.prod
+```
+2. Overwrite variables as you like (format: `{variable name}={variable value}`)
+
+| Variable | Description | Default value | Required |
+| --- | --- | --- | --- |
+| `HOST` | Host which your container should be accessible. E.g. `test.com` | none | true |
 
 <!-- CONTRIBUTING -->
 ## Contributing

@@ -1,12 +1,13 @@
+# To be tested
 version: "3.7"
 services:
     portainer:
         container_name: portainerProd
 
         environment:
-            VIRTUAL_HOST: portainer.luisbeu.de
+            VIRTUAL_HOST: ${HOST:?Missing environment variable see readme}
             VIRTUAL_PORT: 9000
-            LETSENCRYPT_HOST: portainer.luisbeu.de
+            LETSENCRYPT_HOST: ${HOST:?Missing environment variable see readme}
 
             networks:
                 - default
