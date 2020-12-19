@@ -9,9 +9,9 @@ services:
             VIRTUAL_PORT: 9000
             LETSENCRYPT_HOST: ${HOST:?Missing environment variable see readme}
 
-            networks:
-                - default
-                - nginxproxynet
+        networks:
+            - default
+            - nginxproxynet
 
         ports:
             - 9000
