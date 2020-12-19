@@ -13,4 +13,5 @@ services:
             - portainerData:/data
 
 volumes:
-    portainerData: {}
+    portainerData:
+        driver: local
