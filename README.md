@@ -84,7 +84,7 @@ To get a copy up and running follow these simple steps.
 1. Clone the repo
 
 ```sh
-git clone https://github.com/beuluis/portainer-ce.git --branch master
+git clone https://github.com/beuluis/portainer-ce.git --branch master --bare
 ```
 
 2. Create a `.env.prod` file
